@@ -9,10 +9,10 @@ const backgrounds = {
   6000: 'rgb(255,255,255)',
   7000: 'rgb(201,226,255)',
   20000: 'rgb(64,156,255)',
-  reset: '#111',
+  dark: '#111',
 };
 
-// Function to toggle controls
+// Function to toggle control visibility
 function toggleControls() {
   document.getElementById('body').classList.toggle('active');
 }
@@ -32,7 +32,7 @@ function setup() {
     output.classList.add('lightButton');
     output.style.backgroundColor = backgrounds[k];
     output.dataset.name = k;
-    output.title = k === 'reset' ? k : `${k} Kelvin`;
+    output.title = k === 'dark' ? k : `${k} Kelvin`;
     controlBox.appendChild(output);
   });
 

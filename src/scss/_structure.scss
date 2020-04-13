@@ -1,6 +1,6 @@
 html, body {
   width: 100%;
-  height: auto;
+  height: 100%;
   min-height: 100vh;
   background-color: $background;
 }
@@ -9,11 +9,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 500ms linear;
+  transition: background-color 200ms linear;
 
   &.active {
 
-    .container {
+    .container, .footer {
       opacity: 0;
     }
 
@@ -27,6 +27,7 @@ body {
   text-align: center;
   opacity: 1;
   transition: opacity 200ms linear;
+  padding-bottom: 3rem;
 
   .container__controls {
     padding-left: 2rem;
@@ -34,10 +35,18 @@ body {
     margin-top: -1rem;
     white-space:pre-wrap
   }
+}
 
-  &.container--hidden {
-    display: none;
-  }
+.footer {
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  font-size: 0.8rem;
+  text-transform: lowercase;
 }
 
 .overlay {
@@ -70,10 +79,9 @@ body {
   &::after {
     content: attr(data-name);
     display: block;
-    color: $title;
+    color: $text;
     font-family: $mainFont, $fontStack;
     font-size: 0.8rem;
-    text-transform: uppercase;
     position: absolute;
     top: calc(100% + 1rem);
     left: 50%;

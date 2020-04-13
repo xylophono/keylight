@@ -2,8 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="language" content="english"> 
+    <meta http-equiv="content-type" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Keylight</title>
+    <meta name=”robots” content=”index,follow”>
+
+    <title>KEYLIGHT.ME - Browser based keylight for videochat</title>
+    <meta name="description" content="A free second screen keylight for webcams - Stop looking like a zombie on video calls!">
+    <meta name="author" content=”xylophono.com”>
+    <meta property="og:title" content="KEYLIGHT.ME - Browser based keylight for videochat">
+    <meta property="og:url" content="https://keylight.me">
+    <meta property="og:description" content="A free second screen keylight for webcams - Stop looking like a zombie on video calls!">
+    <meta property="og:image" content="https://keylight.me/resources/opengraph.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icons/180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/16.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+
     <link rel="stylesheet" href="https://use.typekit.net/weg7vgg.css">
     <link rel="stylesheet" href="/resources/app.css">
   </head>
@@ -12,7 +28,10 @@
       <h1 class="container__title title">Keylight</h1>
       <div id="controls" class="container__controls"></div>
     </main>
+    <footer class="footer">
+      <a href="https://github.com/xylophono/keylight" title="About Keylight" target="_blank" rel="noopener">About</a>
+    </footer>
     <div id="overlay" class="overlay"></div>
-    <script src="/resources/app.js"></script>
+    <script src="/resources/app.js" defer></script>
   </body>
 </html>
