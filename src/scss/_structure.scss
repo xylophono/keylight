@@ -1,0 +1,82 @@
+html, body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: $background;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 500ms linear;
+
+  &.active {
+
+    .container {
+      opacity: 0;
+    }
+
+    .overlay {
+      display: block;
+    }
+  }
+}
+
+.container {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 200ms linear;
+
+  .container__controls {
+    padding-left: 2rem;
+    min-height: calc(40px + 2rem);
+    margin-top: -1rem;
+    white-space:pre-wrap
+  }
+
+  &.container--hidden {
+    display: none;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lightButton {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-top: 3rem;
+  margin-right: 2rem;
+  border: 2px solid $outline;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: attr(data-name);
+    display: block;
+    color: $title;
+    font-family: $mainFont, $fontStack;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
