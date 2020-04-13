@@ -1,4 +1,4 @@
-![keylight demo image](https://github.com/xylophono/keylight/docs/resources/opengraph.jpg "Keylight.me")
+![keylight demo image](http://xylophono.github.io/keylight/resources/opengraph.jpg "Keylight.me")
 
 # keylight
 A free second screen keylight for webcams - Stop looking like a zombie on video calls!
