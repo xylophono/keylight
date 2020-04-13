@@ -38,9 +38,9 @@ function setup() {
 
   // Then lets add an event listener to handle button clicks
   const buttons = document.getElementsByClassName('lightButton');
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', setBackgroundColor);
-  }
+  Array.from(buttons).forEach((button) => {
+    button.addEventListener('click', setBackgroundColor);
+  });
 
   // And one for the overlay
   document.getElementById('overlay').addEventListener('click', toggleControls);
